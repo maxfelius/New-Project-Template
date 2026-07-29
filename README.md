@@ -80,8 +80,26 @@ python -m pytest app/test/test_hello.py -v
 
 - **Python Version**: 3.12
 - **Formatter**: Ruff
-- **Linting**: Pylance
+- **Linting**: Ruff, Pylance
 - **Testing**: pytest
+- **Pre-commit Hooks**: Code formatting and linting run on commit, tests run on push
+
+## Pre-commit Setup
+
+This project uses pre-commit hooks for code quality:
+
+- **On `git commit`**: Ruff lint and format run automatically
+- **On `git push`**: Tests run automatically (blocks push if tests fail)
+
+To install the hooks:
+
+```bash
+# Install pre-commit hook (runs on git commit)
+pre-commit install
+
+# Install pre-push hook (runs on git push)
+pre-commit install --hook-type pre-push
+```
 
 ## Adding New Features
 
