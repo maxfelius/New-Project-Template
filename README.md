@@ -4,9 +4,7 @@ This is a repository template for starting new Python projects. It contains the 
 
 ## Prerequisites
 
-- Python 3.12+
-- pip
-- make (optional, for convenience commands)
+- VS Code
 
 ## Quick Start
 
