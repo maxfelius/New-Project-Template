@@ -8,11 +8,11 @@ on:
         required: false
         type: string
         default: '3.12'
-    secrets:
-      SONAR_TOKEN:
-        required: false
-      GITHUB_TOKEN:
-        required: false
+    # secrets:
+    #   SONAR_TOKEN:
+    #     required: false
+    #   GITHUB_TOKEN:
+    #     required: false
     outputs:
       testing-result:
         description: 'Result of testing stage'
