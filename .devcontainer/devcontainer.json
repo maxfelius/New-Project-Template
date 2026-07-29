@@ -4,7 +4,9 @@
     "features": {
         "ghcr.io/devcontainers/features/git:1": {},
         "ghcr.io/devcontainers/features/github-cli:1": {},
-        "ghcr.io/devcontainers/features/common-utils:2": { "installMake": true }
+        "ghcr.io/devcontainers/features/common-utils:2": {
+            "installMake": true
+        }
     },
     "customizations": {
         "vscode": {
@@ -30,7 +32,7 @@
     //     8000,
     //     5432
     // ],
-    "workspaceFolder": "/workspace",
+    // "workspaceFolder": "/workspace",
     "remoteUser": "vscode",
     "containerUser": "vscode"
 }
