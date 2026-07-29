@@ -3,6 +3,9 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Pre-commit symlink (generated)
+.pre-commit-config.yaml
+
 # C extensions
 *.so
 

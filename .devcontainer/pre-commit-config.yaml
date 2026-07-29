@@ -1,0 +1,27 @@
+repos:
+  # Run tests
+  - repo: local
+    hooks:
+      - id: tests
+        name: Run tests
+        entry: python -m pytest app/test/ -v
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
+
+  # Linting with ruff (already in VSCode extensions)
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.0
+    hooks:
+      - id: ruff
+        name: Ruff lint
+        args: [--fix, --exit-non-zero-on-fix]
+        stages: [pre-push]
+
+  # Code formatting with ruff
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.0
+    hooks:
+      - id: ruff-format
+        name: Ruff format
+        stages: [pre-push]
