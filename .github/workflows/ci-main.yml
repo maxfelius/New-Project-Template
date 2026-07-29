@@ -1,0 +1,14 @@
+name: CI-Main Pipeline
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  ci:
+    name: Run CI Pipeline
+    uses: ./.github/workflows/ci-reusable.yml
+    secrets: inherit
+    with:
+      python-version: '3.12'

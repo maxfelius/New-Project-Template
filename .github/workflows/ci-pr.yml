@@ -1,0 +1,19 @@
+name: CI-PR Pipeline
+
+on:
+  push:
+    branches:
+      - 'feature/**'
+      - 'bugfix/**'
+  pull_request:
+    branches:
+      - 'feature/**'
+      - 'bugfix/**'
+
+jobs:
+  ci:
+    name: Run CI Pipeline
+    uses: ./.github/workflows/ci-reusable.yml
+    secrets: inherit
+    with:
+      python-version: '3.12'
