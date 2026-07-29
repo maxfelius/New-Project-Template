@@ -1,0 +1,9 @@
+[
+  {
+    "key": "cmd+alt+f",
+    "command": "editor.action.formatDocument",
+    "when": "editorHasDocument && editorTextFocus"
+  }
+]
+
+
