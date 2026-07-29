@@ -16,19 +16,6 @@ This is a repository template for starting new Python projects. It contains the 
 2. When prompted, click "Reopen in Container" to build and enter the Dev Container
 3. The environment will be automatically set up with all dependencies
 
-### Local Development
-
-1. Clone the repository
-2. Create a virtual environment:
-   ```bash
-   python -m venv .venv
-   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
-   ```
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
 ## Usage
 
 ### Run the Application
@@ -36,10 +23,6 @@ This is a repository template for starting new Python projects. It contains the 
 ```bash
 # Using make (recommended)
 make run
-
-# Or directly with Python
-python -m app.src.main
-python -m app.src.hello
 ```
 
 ### Run Tests
@@ -47,12 +30,6 @@ python -m app.src.hello
 ```bash
 # Using make (recommended)
 make test
-
-# Or directly with pytest
-python -m pytest app/test/ -v
-
-# Run a specific test file
-python -m pytest app/test/test_hello.py -v
 ```
 
 ## Project Structure
@@ -64,11 +41,9 @@ python -m pytest app/test/test_hello.py -v
 ├── .agent/                # AI agent instructions
 ├── app/
 │   ├── src/               # Application source code
-│   │   ├── __init__.py
 │   │   ├── hello.py       # Hello world module
 │   │   └── main.py        # Application entry point
 │   └── test/              # Unit tests
-│       ├── __init__.py
 │       └── test_hello.py  # Test suite
 ├── Makefile               # Convenience commands
 ├── requirements.txt        # Python dependencies
@@ -91,21 +66,9 @@ This project uses pre-commit hooks for code quality:
 - **On `git commit`**: Ruff lint and format run automatically
 - **On `git push`**: Tests run automatically (blocks push if tests fail)
 
-To install the hooks:
-
-```bash
-# Install pre-commit hook (runs on git commit)
-pre-commit install
-
-# Install pre-push hook (runs on git push)
-pre-commit install --hook-type pre-push
-```
-
 ## Adding New Features
 
 1. Add source files to `app/src/`
 2. Add corresponding tests to `app/test/`
 3. Add new dependencies to `requirements.txt`
 4. Update the `Makefile` with any new convenience commands
-
-# test
