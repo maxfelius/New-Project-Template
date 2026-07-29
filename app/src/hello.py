@@ -10,7 +10,7 @@ def hello(name: str | None = None) -> str:
     Returns:
         A greeting string.
     """
-    if name:
+    if name is not None:
         return f"Hello, {name}!"
     return "Hello, World!"
 
