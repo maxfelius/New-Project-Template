@@ -17,3 +17,4 @@ def hello(name: str | None = None) -> str:
 
 if __name__ == "__main__":
     print(hello())
+x = 1
