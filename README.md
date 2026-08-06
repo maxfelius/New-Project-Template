@@ -61,7 +61,6 @@ make test
 
 This project uses pre-commit hooks for code quality:
 
-- **On `git commit`**: Ruff lint and format run automatically
 - **On `git push`**: Tests run automatically (blocks push if tests fail)
 
 ## Adding New Features
